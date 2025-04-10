@@ -10,7 +10,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy
 public class AppConfig {
 
-    @Bean
+    @Bean("myBean2")
     public MyBean myBean() {
         return new MyBean();
     }
