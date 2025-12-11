@@ -1,5 +1,8 @@
 package com.puxinxiaolin;
 
+import com.puxinxiaolin.study.spring.dynamicProxy.cglib.LoggingMethodHandler;
+import com.puxinxiaolin.study.spring.service.CglibService;
+import net.sf.cglib.proxy.Enhancer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -27,11 +30,11 @@ public class StudyApplication {
 //        result.performTask();
 
         // 2.2. dynamic proxy for cglib test
-//        Enhancer enhancer = new Enhancer();
-//
-//        enhancer.setSuperclass(CglibService.class);
-//        enhancer.setCallback(new LoggingMethodHandler());
-//        CglibService result = (CglibService) enhancer.create();
-//        result.performTask();
+        Enhancer enhancer = new Enhancer();
+
+        enhancer.setSuperclass(CglibService.class);
+        enhancer.setCallback(new LoggingMethodHandler());
+        CglibService result = (CglibService) enhancer.create();
+        result.performTask();
     }
 }

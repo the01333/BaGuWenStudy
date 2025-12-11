@@ -1,4 +1,4 @@
-package com.puxinxiaolin.study.service;
+package com.puxinxiaolin.study.spring.service;
 
 public class CglibService {
 

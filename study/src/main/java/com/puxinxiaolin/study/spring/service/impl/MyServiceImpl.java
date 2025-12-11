@@ -1,6 +1,6 @@
-package com.puxinxiaolin.study.service.impl;
+package com.puxinxiaolin.study.spring.service.impl;
 
-import com.puxinxiaolin.study.service.MyService;
+import com.puxinxiaolin.study.spring.service.MyService;
 import org.springframework.stereotype.Service;
 
 @Service
